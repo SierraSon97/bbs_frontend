@@ -13,7 +13,6 @@ class HeaderComponent extends Component {
           <nav className="navbar navbar-expand-md navbar-dart bg-dark">
             <div>
               <a herf="https://localhost:3000" className="navbar-brand">
-                {" "}
                 Board-FullStack-App
               </a>
             </div>

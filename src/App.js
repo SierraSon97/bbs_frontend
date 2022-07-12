@@ -8,18 +8,14 @@ function App() {
   return (
     <div>
       <Router>
-        {" "}
-        # 3.
-        <HeaderComponent /> # 4.
+        <HeaderComponent /> 
         <div className="container">
           <Routes>
-            {" "}
-            # 5.
             <Route path="/" exact component={ListBoardComponent}></Route>
             <Route path="/board" component={ListBoardComponent}></Route>
           </Routes>
         </div>
-        <FooterComponent /> # 6.
+        <FooterComponent /> 
       </Router>
     </div>
   );
