@@ -8,14 +8,14 @@ function App() {
   return (
     <div>
       <Router>
-        <HeaderComponent /> 
+        <HeaderComponent />
         <div className="container">
           <Routes>
-            <Route path="/" exact component={ListBoardComponent}></Route>
-            <Route path="/board" component={ListBoardComponent}></Route>
+            <Route path="/" exact={true} element={<ListBoardComponent />}></Route>
+            <Route path="/board" element={<ListBoardComponent />}></Route>
           </Routes>
         </div>
-        <FooterComponent /> 
+        <FooterComponent />
       </Router>
     </div>
   );
