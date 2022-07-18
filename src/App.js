@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ListBoardComponent from "./components/ListBoardComponent";
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
@@ -10,10 +10,10 @@ function App() {
       <Router>
         <HeaderComponent />
         <div className="container">
-          <Routes>
-            <Route path="/" exact={true} element={<ListBoardComponent />}></Route>
-            <Route path="/board" element={<ListBoardComponent />}></Route>
-          </Routes>
+          <Switch>
+            <Route path="/" exact component={ListBoardComponent}></Route>
+            <Route path="/board" component={ListBoardComponent}></Route>
+          </Switch>
         </div>
         <FooterComponent />
       </Router>
