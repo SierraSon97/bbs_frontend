@@ -8,6 +8,8 @@ class ListBoardComponent extends Component {
     this.state = {
       boards: [],
     };
+    this.createBoard = this.createBoard.bind(this);
+    this.readBoard = this.readBoard.bind(this);
   }
 
   componentDidMount() {
@@ -16,10 +18,23 @@ class ListBoardComponent extends Component {
     });
   }
 
+  createBoard() {
+    this.props.history.push("/create-board/");
+  }
+
+  readBoard() {
+    this.props.history.push("/read-board/${no}");
+  }
+
   render() {
     return (
       <div>
         <h2 className="text-center">Boards List</h2>
+        <div className="row">
+          <button className="btn btn-primary" onClick={this.createBoard}>
+            글 작성
+          </button>
+        </div>
         <div className="row">
           <table className="table table-striped table-bordered">
             <thead>
@@ -39,8 +54,8 @@ class ListBoardComponent extends Component {
                   <td> {board.no} </td>
                   <td> {board.title} </td>
                   <td> {board.memberNo} </td>
-                  <td> {board.createdTime} </td>
-                  <td> {board.updatedTime} </td>
+                  <td> {board.createTime} </td>
+                  <td> {board.updateTime} </td>
                   <td> {board.likes} </td>
                   <td> {board.counts} </td>
                 </tr>
