@@ -52,7 +52,9 @@ class ListBoardComponent extends Component {
               {this.state.boards.map((board) => (
                 <tr key={board.no}>
                   <td> {board.no} </td>
-                  <td> {board.title} </td>
+                  <td>
+                    <a onClick={() => this.readBoard(board.no)}>{board.title}</a>
+                  </td>
                   <td> {board.memberNo} </td>
                   <td> {board.createTime} </td>
                   <td> {board.updateTime} </td>
