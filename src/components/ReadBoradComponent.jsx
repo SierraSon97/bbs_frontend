@@ -11,7 +11,12 @@ class ReadBoradComponent extends Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    console.log(this.props);
+    BoardService.getOneBoard(this.state.no).then((res) => {
+      this.setState({ board: res.data });
+    });
+  }
 
   returnBoardType(typeNo) {
     let type = null;

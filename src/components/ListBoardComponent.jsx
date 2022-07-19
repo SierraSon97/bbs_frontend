@@ -22,8 +22,8 @@ class ListBoardComponent extends Component {
     this.props.history.push("/create-board/");
   }
 
-  readBoard() {
-    this.props.history.push("/read-board/${no}");
+  readBoard(no) {
+    this.props.history.push("/read-board/" + no);
   }
 
   render() {
@@ -31,7 +31,7 @@ class ListBoardComponent extends Component {
       <div>
         <h2 className="text-center">Boards List</h2>
         <div className="row">
-          <button className="btn btn-primary" onClick={this.createBoard}>
+          <button className="btn btn-primary btn-md-4" onClick={this.createBoard}>
             글 작성
           </button>
         </div>
