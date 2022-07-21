@@ -91,7 +91,9 @@ class CreateBoardComponent extends Component {
         <div className="container">
           <div className="row">
             <div className="card col-md-6 offset-md-3 offset-md-3">
-              <h3 className="text-center">새글을 작성해주세요</h3>
+              {
+                this.getTitle()
+              }
               <div className="card-body">
                 <form>
                   <div className="form-group">
