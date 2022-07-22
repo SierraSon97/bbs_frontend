@@ -14,7 +14,7 @@ class HeaderComponent extends Component {
           <nav className="navbar navbar-expand-md navbar-dart bg-dark">
             <div>
               <Link to="/" className="navbar-brand">
-                Board-FullStack-App
+                My BBS
               </Link>
             </div>
           </nav>
